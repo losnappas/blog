@@ -49,15 +49,15 @@ def _export_html_wasm(notebook_path: Path, output_dir: Path, as_app: bool = Fals
     output_path: Path = notebook_path.with_suffix(".html")
 
     # Base command for marimo export
-    cmd: List[str] = ["uvx", "marimo", "export", "html-wasm", "--sandbox"]
+    cmd: List[str] = ["uvx", "marimo", "export", "html"]
 
     # Configure export mode based on whether it's an app or a notebook
     if as_app:
         logger.info(f"Exporting {notebook_path} to {output_path} as app")
-        cmd.extend(["--mode", "run", "--no-show-code"])  # Apps run in "run" mode with hidden code
+        cmd.extend(["--no-include-code"])  # Apps run in "run" mode with hidden code
     else:
         logger.info(f"Exporting {notebook_path} to {output_path} as notebook")
-        cmd.extend(["--mode", "edit"])  # Notebooks run in "edit" mode
+        cmd.extend([])  # Notebooks run in "edit" mode
 
     try:
         # Create full output path and ensure directory exists
