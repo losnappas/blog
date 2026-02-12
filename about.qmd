@@ -1,0 +1,18 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/losnappas
+    - icon: github
+      text: Github
+      href: https://github.com/losnappas
+
+---
+
+I am a free developer, I learn AI on my own time. I live in the EU.
+
+For email, you can find it on my Github page.

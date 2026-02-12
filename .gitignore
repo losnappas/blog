@@ -1,3 +1,10 @@
 /.direnv
 /result
 .env
+.venv
+
+/.quarto/
+**/*.quarto_ipynb
+__pycache__
+/_site
+/_freeze

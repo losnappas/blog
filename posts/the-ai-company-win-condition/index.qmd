@@ -1,0 +1,293 @@
+---
+title: "The AI Company Win Condition"
+author: "losnappas"
+date: "2026-02-13"
+categories: [opinion]
+---
+
+What do I mean by a win condition? I mean whatever makes an AI company succeed financially in the long run.
+
+## Condition 1: Fast Takeoff
+
+The dream of any AI company, as well as anyone, is that AI starts recursive improvement, becoming smarter than human beings can imagine. Assuming it aligns (misalignment being the horrible loss condition), there is no reason to be against this outcome. It is technological singularity, in a nutshell.
+
+```{python}
+import altair as alt
+import pandas as pd
+import math
+
+_data = pd.DataFrame(
+    {"time": list(range(20)), "intelligence": [1.2**_x for _x in range(20)]}
+)
+
+chart = (
+    alt.Chart(_data)
+    .mark_line()
+    .encode(
+        x=alt.X("time", title="Time"),
+        y=alt.Y("intelligence", axis=None),
+        color=alt.datum("AI Intelligence"),
+    )
+)
+
+human_line = (
+    alt.Chart()
+    .mark_rule(strokeDash=[3, 3])
+    .encode(y=alt.datum(10), color=alt.datum("Human Intelligence"))
+)
+
+(
+    (chart + human_line)
+    .properties(
+        title="The Singularity Curve",
+        width=250,
+        height=100,
+    )
+    .configure_range(category={"scheme": ["orange", "cyan"]})
+    .encode(
+        color=alt.Color(
+            legend=alt.Legend(title="Type"),
+            scale=alt.Scale(
+                domain=["AI Intelligence", "Human Intelligence"],
+                range=["orange", "cyan"],
+            ),
+        )
+    )
+)
+```
+
+
+## Condition 2: "Go Make Money for Me"
+
+The AI doesn't become infinitely smart, but it is clever enough to make more money than it costs to run, by itself.
+
+For example, the AI company tells their AI to "make money," and it succeeds. Now, what happens to the worth of the AI company? This is a general money-making machine, so you can imagine using it as leverage for your loans. Who wouldn't give you a loan, with knowledge you have access to a machine that can make more money than it consumes? The AI company becomes like the Federal Reserve, with the ability to print money. Money itself turns obsolete.
+
+
+```{python}
+_time = list(range(40))
+_win_threshold = 25
+
+# AI Value Generation per Dollar (Blue Line)
+# Starts in negative, crosses zero exactly at _win_threshold
+_value = [100 * (1.1 ** (_x - _win_threshold)) - 100 for _x in _time]
+
+# Capital required: Peaks as scaling intensifies, then fades
+_capital = []
+_peak_val = 10 + 2 * _win_threshold + 0.1 * (_win_threshold**2)
+for _x in _time:
+    if _x < _win_threshold:
+        # Increasing investment for R&D and compute
+        val = 10 + 2 * _x + 0.1 * (_x**2)
+    else:
+        # The 'Money Printer' starts covering costs
+        val = _peak_val * (0.85 ** (_x - _win_threshold))
+    _capital.append(val)
+
+_df = pd.DataFrame(
+    {
+        "time": _time,
+        "External Capital Required": _capital,
+        "Autonomous Earning Capacity": _value,
+    }
+)
+
+_base = alt.Chart(_df).encode(x=alt.X("time", title="Time"))
+
+# Value Line (Blue)
+_value_line = _base.mark_line(strokeWidth=4).encode(
+    y=alt.Y("Autonomous Earning Capacity", title="Value (USD)"),
+    color=alt.datum("Autonomous Earning Capacity"),
+    tooltip=["time", "Autonomous Earning Capacity"],
+)
+
+# Capital Line (Red)
+_capital_line = _base.mark_line(strokeWidth=3, strokeDash=[4, 2]).encode(
+    y=alt.Y("External Capital Required"),
+    color=alt.datum("External Capital Required"),
+    tooltip=["time", "External Capital Required"],
+)
+
+# Bold Zero Line
+_zero_line = (
+    alt.Chart(pd.DataFrame({"y": [0]}))
+    .mark_rule(color="black", strokeWidth=2)
+    .encode(y=alt.Y("y"))
+)
+
+_chart = (
+    alt.layer(_value_line, _capital_line, _zero_line)
+    .resolve_scale(color="shared")
+    .encode(
+        color=alt.Color(
+            scale=alt.Scale(
+                domain=[
+                    "Autonomous Earning Capacity",
+                    "External Capital Required",
+                ],
+                range=["#4c78a8", "#e45756"],
+            ),
+            legend=alt.Legend(title="Metric", orient="right"),
+        )
+    )
+    .properties(
+        title="Independent AI Money Printer (Capital Decoupling)",
+        width=500,
+        height=300,
+    )
+    .interactive()
+)
+
+# Annotation for the Win Condition
+_win_line = (
+    alt.Chart(pd.DataFrame({"time": [_win_threshold]}))
+    .mark_rule(color="gray", strokeDash=[4, 4])
+    .encode(x="time")
+)
+
+_label = _win_line.mark_text(
+    align="right",
+    dx=-5,
+    dy=-120,
+    text="AI Earns Independently",
+    color="gray",
+).encode(x="time")
+
+_chart + _win_line + _label
+```
+
+## Condition 3: The Slow Grind
+
+Currently, AI companies burn money on R&D and capital expenditure (CapEx, like buying GPUs). If the previous conditions seem out of reach, I would assume the AI company has to start reducing R&D and CapEx costs, improving token/$ cost, and expanding their market reach.
+
+For an AI researcher, I imagine this would be the dullest outcome. Away from building toward singularity, and more toward pleasing market forces.
+
+```{python}
+_time = list(range(60))
+_market_pressure_time = 40
+
+# AI Value Generation (Independent Revenue) - Trending up but never profitable
+_value = [-130 + 1.5 * _x + 12 * math.sin(_x / 5) for _x in _time]
+
+# $/token - Efficiency (decreasing cost)
+_token_cost = []
+_initial_cost = 150
+for _x in _time:
+    if _x < _market_pressure_time:
+        # Relatively flat or very slow decline initially
+        _t_val = _initial_cost * (0.995**_x)
+    else:
+        # Sharper decline after market pressure hits
+        _t_val = (_initial_cost * (0.995**_market_pressure_time)) * (
+            0.9 ** (_x - _market_pressure_time)
+        )
+    _token_cost.append(_t_val)
+
+# Capital required (Red Line) - Plateaus, then slow decline due to "Austerity"
+_capital = []
+_peak_val = 130
+for _x in _time:
+    if _x < 20:
+        _val = 30 + 5 * _x
+    elif _x < _market_pressure_time:
+        _val = _peak_val
+    else:
+        # Slow decline after market pressure hits (cost cutting)
+        _val = _peak_val * (0.97 ** (_x - _market_pressure_time))
+    _capital.append(_val)
+
+_df = pd.DataFrame(
+    {
+        "time": _time,
+        "External Capital Required": _capital,
+        "Autonomous Earning Capacity": _value,
+        "$/token (Efficiency)": _token_cost,
+    }
+)
+
+_base = alt.Chart(_df).encode(x=alt.X("time", title="Time"))
+
+# Revenue Line (Blue)
+_value_line = _base.mark_line(strokeWidth=4).encode(
+    y=alt.Y(
+        "Autonomous Earning Capacity",
+        title="Net Value (USD) / Efficiency",
+        scale=alt.Scale(domain=[-160, 200]),
+    ),
+    color=alt.datum("Autonomous Earning Capacity"),
+    tooltip=["time", "Autonomous Earning Capacity"],
+)
+
+# Token Cost Line (Green)
+_token_line = _base.mark_line(strokeWidth=3, strokeDash=[2, 1]).encode(
+    y=alt.Y("$/token (Efficiency)"),
+    color=alt.datum("$/token (Efficiency)"),
+    tooltip=["time", "$/token (Efficiency)"],
+)
+
+# Capital Line (Red)
+_capital_line = _base.mark_line(strokeWidth=3, strokeDash=[4, 2]).encode(
+    y=alt.Y("External Capital Required"),
+    color=alt.datum("External Capital Required"),
+    tooltip=["time", "External Capital Required"],
+)
+
+# Bold Zero Line (Profitability/Self-Sufficiency Threshold)
+_zero_line = (
+    alt.Chart(pd.DataFrame({"y": [0]}))
+    .mark_rule(color="black", strokeWidth=2)
+    .encode(y=alt.Y("y"))
+)
+
+# Market Pressure Line
+_pressure_line = (
+    alt.Chart(pd.DataFrame({"time": [_market_pressure_time]}))
+    .mark_rule(color="gray", strokeDash=[2, 2])
+    .encode(x="time")
+)
+
+_pressure_label = _pressure_line.mark_text(
+    align="left",
+    dx=5,
+    dy=-120,
+    text="Market Pressure (Austerity)",
+    color="gray",
+).encode(x="time")
+
+_chart = (
+    alt.layer(
+        _value_line,
+        _token_line,
+        _capital_line,
+        _zero_line,
+        _pressure_line,
+        _pressure_label,
+    )
+    .resolve_scale(color="shared")
+    .encode(
+        color=alt.Color(
+            scale=alt.Scale(
+                domain=[
+                    "Autonomous Earning Capacity",
+                    "External Capital Required",
+                    "$/token (Efficiency)",
+                ],
+                range=["#4c78a8", "#e45756", "#54a24b"],
+            ),
+            legend=alt.Legend(title="Metric", orient="right"),
+        )
+    )
+    .properties(
+        title="The Slow Grind (Failed Self-Sufficiency)",
+        width=500,
+        height=300,
+    )
+    .interactive()
+)
+
+_chart
+```
+
+## Conclusion
+
+I've described three scenarios, and I'm sure there are more. It wouldn't be surprising if condition two was the current playbook, as how else are the companies getting such big investments. There is hype, but is it unfounded, as "AI bubble" folks claim?
