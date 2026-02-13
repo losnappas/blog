@@ -1,0 +1,4 @@
+- Don't run any compilation commands.
+- In marimo, whatever you have in `with app.setup:` is available in the file, doesn't need to be in the arguments of the cell functions.
+- In marimo, you shouldn't `return` and `mo.` thing. Just have `mo.something` on the top level of the cell.
+- In marimo, cell local variables need to be underscore prefixed, `_like_so = 3`. You may not redeclare variables with the same names, across cells.

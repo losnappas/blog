@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>marimo WebAssembly + GitHub Pages Template</title>
+  <title>Losnappas' Blog</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -86,27 +86,25 @@
     }
   </style>
 </head>
-<body class="font-sans max-w-2xl mx-auto p-8 leading-relaxed">    
+<body class="font-sans max-w-2xl mx-auto p-8 leading-relaxed">
     <header>
       <div class="container">
-        <img src="https://raw.githubusercontent.com/marimo-team/marimo/main/docs/_static/marimo-logotype-thick.svg" alt="marimo Logo" class="logo">
-        <h1>marimo WebAssembly + GitHub Pages Template</h1>
-        <p class="subtitle">Interactive Python notebooks exported to WebAssembly and deployed to GitHub Pages</p>
+        <h1>Losnappas Blog</h1>
+        <p class="subtitle">Writings about AI and learning AI</p>
       </div>
     </header>
 
     <main class="container">
 
     {% if notebooks %}
-    <h2 class="section-title">Notebooks</h2>
-    <p>Interactive notebooks in edit mode - you can modify and experiment with the code</p>
+    <h2 class="section-title">Posts</h2>
     <div class="cards">
       {% for notebook in notebooks %}
       <!-- {{ notebook.display_name }} Notebook -->
       <div class="card">
         <div class="card-header">{{ notebook.display_name }}</div>
         <div class="card-body">
-          <a href="{{ notebook.html_path }}" class="card-link">Open Notebook</a>
+          <a href="{{ notebook.html_path }}" class="card-link">Open Post</a>
         </div>
       </div>
       {% endfor %}
@@ -114,15 +112,14 @@
     {% endif %}
 
     {% if apps %}
-    <h2 class="section-title">Apps</h2>
-    <p>Interactive applications in run mode - code is hidden for a clean user interface</p>
+    <h2 class="section-title">Posts</h2>
     <div class="cards">
       {% for app in apps %}
       <!-- {{ app.display_name }} App -->
       <div class="card">
         <div class="card-header app">{{ app.display_name }}</div>
         <div class="card-body">
-          <a href="{{ app.html_path }}" class="card-link app">Open App</a>
+          <a href="{{ app.html_path }}" class="card-link app">Open Post</a>
         </div>
       </div>
       {% endfor %}
@@ -134,11 +131,9 @@
       <div class="container">
         <p>Built with <a href="https://marimo.io" target="_blank">marimo</a> - Interactive Python notebooks</p>
         <div class="footer-links">
-          <a href="https://github.com/marimo-team/marimo" target="_blank">GitHub</a>
-          <a href="https://docs.marimo.io" target="_blank">Documentation</a>
-          <a href="https://discord.gg/JE7nhX6mD8" target="_blank">Discord</a>
+          <a href="https://github.com/losnappas/blog" target="_blank">GitHub</a>
         </div>
-        <p>Licensed under <a href="https://github.com/marimo-team/marimo/blob/main/LICENSE" target="_blank">Apache License 2.0</a></p>
+        <p>Licensed under <a href="https://github.com/losnappas/blog/blob/main/LICENSE" target="_blank">Apache License 2.0</a></p>
       </div>
     </footer>
 
