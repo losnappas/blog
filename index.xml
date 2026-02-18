@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>losnappas blog</title>
+<link>https://losnappas.github.io/</link>
+<atom:link href="https://losnappas.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<description>A blog built with Quarto</description>
+<generator>quarto-1.8.26</generator>
+<lastBuildDate>Thu, 12 Feb 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>The AI Company Win Condition</title>
+  <dc:creator>losnappas </dc:creator>
+  <link>https://losnappas.github.io/posts/the-ai-company-win-condition/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>What do I mean by a win condition? I mean whatever makes an AI company succeed financially in the long run.</p>
+<section id="condition-1-fast-takeoff" class="level2">
+<h2 class="anchored" data-anchor-id="condition-1-fast-takeoff">Condition 1: Fast Takeoff</h2>
+<p>The dream of any AI company, as well as anyone, is that AI starts recursive improvement, becoming smarter than human beings can imagine. Assuming it aligns (misalignment being the horrible loss condition), there is no reason to be against this outcome. It is technological singularity, in a nutshell.</p>
+<div id="da7e412a" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+
+<style>
+  #altair-viz-92a5266d58d3475991903a5311c1e7aa.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-92a5266d58d3475991903a5311c1e7aa.vega-embed details,
+  #altair-viz-92a5266d58d3475991903a5311c1e7aa.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-92a5266d58d3475991903a5311c1e7aa"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-92a5266d58d3475991903a5311c1e7aa") {
+      outputDiv = document.getElementById("altair-viz-92a5266d58d3475991903a5311c1e7aa");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "range": {"category": {"scheme": ["orange", "cyan"]}}}, "layer": [{"data": {"name": "data-526f63140c54ec23b51a946d9bdb1aba"}, "mark": {"type": "line"}, "encoding": {"color": {"datum": "AI Intelligence"}, "x": {"field": "time", "title": "Time", "type": "quantitative"}, "y": {"axis": null, "field": "intelligence", "type": "quantitative"}}}, {"data": {"name": "empty"}, "mark": {"type": "rule", "strokeDash": [3, 3]}, "encoding": {"color": {"datum": "Human Intelligence"}, "y": {"datum": 10}}}], "encoding": {"color": {"legend": {"title": "Type"}, "scale": {"domain": ["AI Intelligence", "Human Intelligence"], "range": ["orange", "cyan"]}}}, "height": 100, "title": "The Singularity Curve", "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-526f63140c54ec23b51a946d9bdb1aba": [{"time": 0, "intelligence": 1.0}, {"time": 1, "intelligence": 1.2}, {"time": 2, "intelligence": 1.44}, {"time": 3, "intelligence": 1.7279999999999998}, {"time": 4, "intelligence": 2.0736}, {"time": 5, "intelligence": 2.4883199999999994}, {"time": 6, "intelligence": 2.9859839999999993}, {"time": 7, "intelligence": 3.583180799999999}, {"time": 8, "intelligence": 4.2998169599999985}, {"time": 9, "intelligence": 5.1597803519999985}, {"time": 10, "intelligence": 6.191736422399997}, {"time": 11, "intelligence": 7.430083706879997}, {"time": 12, "intelligence": 8.916100448255996}, {"time": 13, "intelligence": 10.699320537907195}, {"time": 14, "intelligence": 12.839184645488633}, {"time": 15, "intelligence": 15.40702157458636}, {"time": 16, "intelligence": 18.48842588950363}, {"time": 17, "intelligence": 22.186111067404354}, {"time": 18, "intelligence": 26.623333280885227}, {"time": 19, "intelligence": 31.94799993706227}], "empty": [{}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+</section>
+<section id="condition-2-go-make-money-for-me" class="level2">
+<h2 class="anchored" data-anchor-id="condition-2-go-make-money-for-me">Condition 2: “Go Make Money for Me”</h2>
+<p>The AI doesn’t become infinitely smart, but it is clever enough to make more money than it costs to run, by itself.</p>
+<p>For example, the AI company tells their AI to “make money,” and it succeeds. Now, what happens to the worth of the AI company? This is a general money-making machine, so you can imagine using it as leverage for your loans. Who wouldn’t give you a loan, with knowledge you have access to a machine that can make more money than it consumes? The AI company becomes like the Federal Reserve, with the ability to print money. Money itself turns obsolete.</p>
+<div id="3a14aa23" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="2">
+
+<style>
+  #altair-viz-e6ed563580ea481aa226c4ec9bfd8224.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-e6ed563580ea481aa226c4ec9bfd8224.vega-embed details,
+  #altair-viz-e6ed563580ea481aa226c4ec9bfd8224.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-e6ed563580ea481aa226c4ec9bfd8224"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-e6ed563580ea481aa226c4ec9bfd8224") {
+      outputDiv = document.getElementById("altair-viz-e6ed563580ea481aa226c4ec9bfd8224");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-7df57710cf9e74a8a82ca40b9fc4f186"}, "mark": {"type": "line", "strokeWidth": 4}, "encoding": {"color": {"datum": "Autonomous Earning Capacity"}, "tooltip": [{"field": "time", "type": "quantitative"}, {"field": "Autonomous Earning Capacity", "type": "quantitative"}], "x": {"field": "time", "title": "Time", "type": "quantitative"}, "y": {"field": "Autonomous Earning Capacity", "title": "Value (USD)", "type": "quantitative"}}, "name": "view_a1813548dca7d6b9_0"}, {"data": {"name": "data-7df57710cf9e74a8a82ca40b9fc4f186"}, "mark": {"type": "line", "strokeDash": [4, 2], "strokeWidth": 3}, "encoding": {"color": {"datum": "External Capital Required"}, "tooltip": [{"field": "time", "type": "quantitative"}, {"field": "External Capital Required", "type": "quantitative"}], "x": {"field": "time", "title": "Time", "type": "quantitative"}, "y": {"field": "External Capital Required", "type": "quantitative"}}}, {"data": {"name": "data-a0a55d106695e8d630baff0f16eee66d"}, "mark": {"type": "rule", "color": "black", "strokeWidth": 2}, "encoding": {"y": {"field": "y", "type": "quantitative"}}}, {"data": {"name": "data-c186cf9760f219587ab2072a789116b0"}, "mark": {"type": "rule", "color": "gray", "strokeDash": [4, 4]}, "encoding": {"x": {"field": "time", "type": "quantitative"}}}, {"data": {"name": "data-c186cf9760f219587ab2072a789116b0"}, "mark": {"type": "text", "align": "right", "color": "gray", "dx": -5, "dy": -120, "text": "AI Earns Independently"}, "encoding": {"x": {"field": "time", "type": "quantitative"}}}], "encoding": {"color": {"legend": {"orient": "right", "title": "Metric"}, "scale": {"domain": ["Autonomous Earning Capacity", "External Capital Required"], "range": ["#4c78a8", "#e45756"]}}}, "height": 300, "params": [{"name": "param_1e9efca18e7a2868", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_a1813548dca7d6b9_0"]}], "resolve": {"scale": {"color": "shared"}}, "title": "Independent AI Money Printer (Capital Decoupling)", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-7df57710cf9e74a8a82ca40b9fc4f186": [{"time": 0, "External Capital Required": 10.0, "Autonomous Earning Capacity": -90.7704001822936}, {"time": 1, "External Capital Required": 12.1, "Autonomous Earning Capacity": -89.84744020052295}, {"time": 2, "External Capital Required": 14.4, "Autonomous Earning Capacity": -88.83218422057526}, {"time": 3, "External Capital Required": 16.9, "Autonomous Earning Capacity": -87.71540264263277}, {"time": 4, "External Capital Required": 19.6, "Autonomous Earning Capacity": -86.48694290689605}, {"time": 5, "External Capital Required": 22.5, "Autonomous Earning Capacity": -85.13563719758565}, {"time": 6, "External Capital Required": 25.6, "Autonomous Earning Capacity": -83.64920091734422}, {"time": 7, "External Capital Required": 28.9, "Autonomous Earning Capacity": -82.01412100907864}, {"time": 8, "External Capital Required": 32.4, "Autonomous Earning Capacity": -80.2155331099865}, {"time": 9, "External Capital Required": 36.1, "Autonomous Earning Capacity": -78.23708642098515}, {"time": 10, "External Capital Required": 40.0, "Autonomous Earning Capacity": -76.06079506308366}, {"time": 11, "External Capital Required": 44.1, "Autonomous Earning Capacity": -73.66687456939204}, {"time": 12, "External Capital Required": 48.4, "Autonomous Earning Capacity": -71.03356202633123}, {"time": 13, "External Capital Required": 52.900000000000006, "Autonomous Earning Capacity": -68.13691822896435}, {"time": 14, "External Capital Required": 57.6, "Autonomous Earning Capacity": -64.95061005186078}, {"time": 15, "External Capital Required": 62.5, "Autonomous Earning Capacity": -61.44567105704686}, {"time": 16, "External Capital Required": 67.6, "Autonomous Earning Capacity": -57.59023816275154}, {"time": 17, "External Capital Required": 72.9, "Autonomous Earning Capacity": -53.34926197902669}, {"time": 18, "External Capital Required": 78.4, "Autonomous Earning Capacity": -48.684188176929354}, {"time": 19, "External Capital Required": 84.1, "Autonomous Earning Capacity": -43.55260699462229}, {"time": 20, "External Capital Required": 90.0, "Autonomous Earning Capacity": -37.90786769408451}, {"time": 21, "External Capital Required": 96.1, "Autonomous Earning Capacity": -31.698654463492943}, {"time": 22, "External Capital Required": 102.4, "Autonomous Earning Capacity": -24.86851990984225}, {"time": 23, "External Capital Required": 108.9, "Autonomous Earning Capacity": -17.355371900826455}, {"time": 24, "External Capital Required": 115.6, "Autonomous Earning Capacity": -9.090909090909093}, {"time": 25, "External Capital Required": 122.5, "Autonomous Earning Capacity": 0.0}, {"time": 26, "External Capital Required": 104.125, "Autonomous Earning Capacity": 10.000000000000014}, {"time": 27, "External Capital Required": 88.50625, "Autonomous Earning Capacity": 21.000000000000014}, {"time": 28, "External Capital Required": 75.2303125, "Autonomous Earning Capacity": 33.10000000000005}, {"time": 29, "External Capital Required": 63.945765624999986, "Autonomous Earning Capacity": 46.41000000000005}, {"time": 30, "External Capital Required": 54.35390078124999, "Autonomous Earning Capacity": 61.051000000000045}, {"time": 31, "External Capital Required": 46.20081566406249, "Autonomous Earning Capacity": 77.1561000000001}, {"time": 32, "External Capital Required": 39.27069331445311, "Autonomous Earning Capacity": 94.87171000000012}, {"time": 33, "External Capital Required": 33.380089317285154, "Autonomous Earning Capacity": 114.35888100000017}, {"time": 34, "External Capital Required": 28.373075919692376, "Autonomous Earning Capacity": 135.7947691000002}, {"time": 35, "External Capital Required": 24.11711453173852, "Autonomous Earning Capacity": 159.3742460100002}, {"time": 36, "External Capital Required": 20.49954735197774, "Autonomous Earning Capacity": 185.31167061100024}, {"time": 37, "External Capital Required": 17.424615249181077, "Autonomous Earning Capacity": 213.8428376721003}, {"time": 38, "External Capital Required": 14.810922961803916, "Autonomous Earning Capacity": 245.2271214393104}, {"time": 39, "External Capital Required": 12.58928451753333, "Autonomous Earning Capacity": 279.7498335832414}], "data-a0a55d106695e8d630baff0f16eee66d": [{"y": 0}], "data-c186cf9760f219587ab2072a789116b0": [{"time": 25}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+</section>
+<section id="condition-3-the-slow-grind" class="level2">
+<h2 class="anchored" data-anchor-id="condition-3-the-slow-grind">Condition 3: The Slow Grind</h2>
+<p>Currently, AI companies burn money on R&amp;D and capital expenditure (CapEx, like buying GPUs). If the previous conditions seem out of reach, I would assume the AI company has to start reducing R&amp;D and CapEx costs, improving token/$ cost, and expanding their market reach.</p>
+<p>For an AI researcher, I imagine this would be the dullest outcome. Away from building toward singularity, and more toward pleasing market forces.</p>
+<div id="2bb4c1aa" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+
+<style>
+  #altair-viz-b3cf6709185d42c89334301d6eb7eac4.vega-embed {
+    width: 100%;
+    display: flex;
+  }
+
+  #altair-viz-b3cf6709185d42c89334301d6eb7eac4.vega-embed details,
+  #altair-viz-b3cf6709185d42c89334301d6eb7eac4.vega-embed details summary {
+    position: relative;
+  }
+</style>
+<div id="altair-viz-b3cf6709185d42c89334301d6eb7eac4"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-b3cf6709185d42c89334301d6eb7eac4") {
+      outputDiv = document.getElementById("altair-viz-b3cf6709185d42c89334301d6eb7eac4");
+    }
+
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm/vega@6?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm/vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm/vega-lite@6.1.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm/vega-embed@7?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      let deps = ["vega-embed"];
+      require(deps, displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "6")
+        .then(() => maybeLoadScript("vega-lite", "6.1.0"))
+        .then(() => maybeLoadScript("vega-embed", "7"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"name": "data-896755efcb123a23f4c2301212cdf94d"}, "mark": {"type": "line", "strokeWidth": 4}, "encoding": {"color": {"datum": "Autonomous Earning Capacity"}, "tooltip": [{"field": "time", "type": "quantitative"}, {"field": "Autonomous Earning Capacity", "type": "quantitative"}], "x": {"field": "time", "title": "Time", "type": "quantitative"}, "y": {"field": "Autonomous Earning Capacity", "scale": {"domain": [-160, 200]}, "title": "Net Value (USD) / Efficiency", "type": "quantitative"}}, "name": "view_9b440a127d836559_0"}, {"data": {"name": "data-896755efcb123a23f4c2301212cdf94d"}, "mark": {"type": "line", "strokeDash": [2, 1], "strokeWidth": 3}, "encoding": {"color": {"datum": "$/token (Efficiency)"}, "tooltip": [{"field": "time", "type": "quantitative"}, {"field": "$/token (Efficiency)", "type": "quantitative"}], "x": {"field": "time", "title": "Time", "type": "quantitative"}, "y": {"field": "$/token (Efficiency)", "type": "quantitative"}}}, {"data": {"name": "data-896755efcb123a23f4c2301212cdf94d"}, "mark": {"type": "line", "strokeDash": [4, 2], "strokeWidth": 3}, "encoding": {"color": {"datum": "External Capital Required"}, "tooltip": [{"field": "time", "type": "quantitative"}, {"field": "External Capital Required", "type": "quantitative"}], "x": {"field": "time", "title": "Time", "type": "quantitative"}, "y": {"field": "External Capital Required", "type": "quantitative"}}}, {"data": {"name": "data-a0a55d106695e8d630baff0f16eee66d"}, "mark": {"type": "rule", "color": "black", "strokeWidth": 2}, "encoding": {"y": {"field": "y", "type": "quantitative"}}}, {"data": {"name": "data-9e7c619e364f28232a4e2eaab2146adb"}, "mark": {"type": "rule", "color": "gray", "strokeDash": [2, 2]}, "encoding": {"x": {"field": "time", "type": "quantitative"}}}, {"data": {"name": "data-9e7c619e364f28232a4e2eaab2146adb"}, "mark": {"type": "text", "align": "left", "color": "gray", "dx": 5, "dy": -120, "text": "Market Pressure (Austerity)"}, "encoding": {"x": {"field": "time", "type": "quantitative"}}}], "encoding": {"color": {"legend": {"orient": "right", "title": "Metric"}, "scale": {"domain": ["Autonomous Earning Capacity", "External Capital Required", "$/token (Efficiency)"], "range": ["#4c78a8", "#e45756", "#54a24b"]}}}, "height": 300, "params": [{"name": "param_1e9efca18e7a2868", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_9b440a127d836559_0"]}], "resolve": {"scale": {"color": "shared"}}, "title": "The Slow Grind (Failed Self-Sufficiency)", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-896755efcb123a23f4c2301212cdf94d": [{"time": 0, "External Capital Required": 30.0, "Autonomous Earning Capacity": -130.0, "$/token (Efficiency)": 150.0}, {"time": 1, "External Capital Required": 35.0, "Autonomous Earning Capacity": -126.11596803045927, "$/token (Efficiency)": 149.25}, {"time": 2, "External Capital Required": 40.0, "Autonomous Earning Capacity": -122.3269798922962, "$/token (Efficiency)": 148.50375}, {"time": 3, "External Capital Required": 45.0, "Autonomous Earning Capacity": -118.72429031925958, "$/token (Efficiency)": 147.76123125}, {"time": 4, "External Capital Required": 50.0, "Autonomous Earning Capacity": -115.39172690920573, "$/token (Efficiency)": 147.02242509375}, {"time": 5, "External Capital Required": 55.0, "Autonomous Earning Capacity": -112.40234818230525, "$/token (Efficiency)": 146.28731296828124}, {"time": 6, "External Capital Required": 60.0, "Autonomous Earning Capacity": -109.81553096839329, "$/token (Efficiency)": 145.55587640343984}, {"time": 7, "External Capital Required": 65.0, "Autonomous Earning Capacity": -107.67460324013848, "$/token (Efficiency)": 144.82809702142265}, {"time": 8, "External Capital Required": 70.0, "Autonomous Earning Capacity": -106.00511676350195, "$/token (Efficiency)": 144.10395653631554}, {"time": 9, "External Capital Required": 75.0, "Autonomous Earning Capacity": -104.81382842946167, "$/token (Efficiency)": 143.38343675363393}, {"time": 10, "External Capital Required": 80.0, "Autonomous Earning Capacity": -104.08843087809183, "$/token (Efficiency)": 142.66651956986578}, {"time": 11, "External Capital Required": 85.0, "Autonomous Earning Capacity": -103.79804315416492, "$/token (Efficiency)": 141.95318697201645}, {"time": 12, "External Capital Required": 90.0, "Autonomous Earning Capacity": -103.8944418333862, "$/token (Efficiency)": 141.24342103715637}, {"time": 13, "External Capital Required": 95.0, "Autonomous Earning Capacity": -104.31398353814242, "$/token (Efficiency)": 140.5372039319706}, {"time": 14, "External Capital Required": 100.0, "Autonomous Earning Capacity": -104.98014219812914, "$/token (Efficiency)": 139.83451791231073}, {"time": 15, "External Capital Required": 105.0, "Autonomous Earning Capacity": -105.8065599032816, "$/token (Efficiency)": 139.13534532274917}, {"time": 16, "External Capital Required": 110.0, "Autonomous Earning Capacity": -106.70048972113096, "$/token (Efficiency)": 138.43966859613542}, {"time": 17, "External Capital Required": 115.0, "Autonomous Earning Capacity": -107.56649322432197, "$/token (Efficiency)": 137.74747025315475}, {"time": 18, "External Capital Required": 120.0, "Autonomous Earning Capacity": -108.31024531953823, "$/token (Efficiency)": 137.058732901889}, {"time": 19, "External Capital Required": 125.0, "Autonomous Earning Capacity": -108.84229469131263, "$/token (Efficiency)": 136.37343923737953}, {"time": 20, "External Capital Required": 130.0, "Autonomous Earning Capacity": -109.08162994369513, "$/token (Efficiency)": 135.69157204119264}, {"time": 21, "External Capital Required": 130.0, "Autonomous Earning Capacity": -108.95890926896305, "$/token (Efficiency)": 135.01311418098666}, {"time": 22, "External Capital Required": 130.0, "Autonomous Earning Capacity": -108.41922488667419, "$/token (Efficiency)": 134.33804861008173}, {"time": 23, "External Capital Required": 130.0, "Autonomous Earning Capacity": -107.42429204360157, "$/token (Efficiency)": 133.66635836703134}, {"time": 24, "External Capital Required": 130.0, "Autonomous Earning Capacity": -105.95397530603009, "$/token (Efficiency)": 132.99802657519618}, {"time": 25, "External Capital Required": 130.0, "Autonomous Earning Capacity": -104.00709129595766, "$/token (Efficiency)": 132.33303644232018}, {"time": 26, "External Capital Required": 130.0, "Autonomous Earning Capacity": -101.60145586864184, "$/token (Efficiency)": 131.67137126010857}, {"time": 27, "External Capital Required": 130.0, "Autonomous Earning Capacity": -98.77317385067184, "$/token (Efficiency)": 131.01301440380803}, {"time": 28, "External Capital Required": 130.0, "Autonomous Earning Capacity": -95.57519965446787, "$/token (Efficiency)": 130.357949331789}, {"time": 29, "External Capital Required": 130.0, "Autonomous Earning Capacity": -92.07522615296509, "$/token (Efficiency)": 129.70615958513005}, {"time": 30, "External Capital Required": 130.0, "Autonomous Earning Capacity": -88.35298597838711, "$/token (Efficiency)": 129.0576287872044}, {"time": 31, "External Capital Required": 130.0, "Autonomous Earning Capacity": -84.49707283380995, "$/token (Efficiency)": 128.41234064326838}, {"time": 32, "External Capital Required": 130.0, "Autonomous Earning Capacity": -80.60140954179407, "$/token (Efficiency)": 127.77027894005204}, {"time": 33, "External Capital Required": 130.0, "Autonomous Earning Capacity": -76.76150363783947, "$/token (Efficiency)": 127.13142754535178}, {"time": 34, "External Capital Required": 130.0, "Autonomous Earning Capacity": -73.0706397863367, "$/token (Efficiency)": 126.49577040762502}, {"time": 35, "External Capital Required": 130.0, "Autonomous Earning Capacity": -69.61616081537453, "$/token (Efficiency)": 125.86329155558688}, {"time": 36, "External Capital Required": 130.0, "Autonomous Earning Capacity": -66.47598563381017, "$/token (Efficiency)": 125.23397509780897}, {"time": 37, "External Capital Required": 130.0, "Autonomous Earning Capacity": -63.71550285026048, "$/token (Efficiency)": 124.60780522231991}, {"time": 38, "External Capital Required": 130.0, "Autonomous Earning Capacity": -61.38496393562217, "$/token (Efficiency)": 123.98476619620831}, {"time": 39, "External Capital Required": 130.0, "Autonomous Earning Capacity": -59.51747985550474, "$/token (Efficiency)": 123.36484236522726}, {"time": 40, "External Capital Required": 130.0, "Autonomous Earning Capacity": -58.12770104051942, "$/token (Efficiency)": 122.74801815340113}, {"time": 41, "External Capital Required": 126.1, "Autonomous Earning Capacity": -57.21123331984272, "$/token (Efficiency)": 110.47321633806102}, {"time": 42, "External Capital Required": 122.317, "Autonomous Earning Capacity": -56.74481310294063, "$/token (Efficiency)": 99.42589470425493}, {"time": 43, "External Capital Required": 118.64748999999999, "Autonomous Earning Capacity": -56.68723482551064, "$/token (Efficiency)": 89.48330523382944}, {"time": 44, "External Capital Required": 115.0880653, "Autonomous Earning Capacity": -56.980993685298856, "$/token (Efficiency)": 80.53497471044649}, {"time": 45, "External Capital Required": 111.63542334099999, "Autonomous Earning Capacity": -57.55457817709892, "$/token (Efficiency)": 72.48147723940184}, {"time": 46, "External Capital Required": 108.28636064076997, "Autonomous Earning Capacity": -58.32532103079703, "$/token (Efficiency)": 65.23332951546166}, {"time": 47, "External Capital Required": 105.03776982154687, "Autonomous Earning Capacity": -59.202694894559706, "$/token (Efficiency)": 58.709996563915496}, {"time": 48, "External Capital Required": 101.88663672690046, "Autonomous Earning Capacity": -60.091921374675756, "$/token (Efficiency)": 52.83899690752395}, {"time": 49, "External Capital Required": 98.83003762509347, "Autonomous Earning Capacity": -60.89774955102314, "$/token (Efficiency)": 47.55509721677156}, {"time": 50, "External Capital Required": 95.86513649634065, "Autonomous Earning Capacity": -61.528253330672435, "$/token (Efficiency)": 42.7995874950944}, {"time": 51, "External Capital Required": 92.98918240145042, "Autonomous Earning Capacity": -61.89849625112251, "$/token (Efficiency)": 38.51962874558496}, {"time": 52, "External Capital Required": 90.19950692940691, "Autonomous Earning Capacity": -61.933917629027846, "$/token (Efficiency)": 34.66766587102647}, {"time": 53, "External Capital Required": 87.4935217215247, "Autonomous Earning Capacity": -61.57330505935368, "$/token (Efficiency)": 31.20089928392382}, {"time": 54, "External Capital Required": 84.86871606987896, "Autonomous Earning Capacity": -60.771234760797896, "$/token (Efficiency)": 28.08080935553144}, {"time": 55, "External Capital Required": 82.32265458778258, "Autonomous Earning Capacity": -59.49988247860844, "$/token (Efficiency)": 25.272728419978296}, {"time": 56, "External Capital Required": 79.8529749501491, "Autonomous Earning Capacity": -57.750132749815805, "$/token (Efficiency)": 22.745455577980465}, {"time": 57, "External Capital Required": 77.45738570164464, "Autonomous Earning Capacity": -55.53194230797611, "$/token (Efficiency)": 20.470910020182423}, {"time": 58, "External Capital Required": 75.13366413059529, "Autonomous Earning Capacity": -52.87394313962451, "$/token (Efficiency)": 18.423819018164178}, {"time": 59, "External Capital Required": 72.87965420667743, "Autonomous Earning Capacity": -49.82230101732547, "$/token (Efficiency)": 16.581437116347765}], "data-a0a55d106695e8d630baff0f16eee66d": [{"y": 0}], "data-9e7c619e364f28232a4e2eaab2146adb": [{"time": 40}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>I’ve described three scenarios, and I’m sure there are more. It wouldn’t be surprising if condition two was the current playbook, as how else are the companies getting such big investments. There is hype, but is it unfounded, as “AI bubble” folks claim?</p>
+
+
+</section>
+
+ ]]></description>
+  <category>opinion</category>
+  <guid>https://losnappas.github.io/posts/the-ai-company-win-condition/</guid>
+  <pubDate>Thu, 12 Feb 2026 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
