@@ -15,4 +15,6 @@ about:
 
 I am a free developer, I learn AI on my own time. I live in the EU.
 
+Ideas mine, text by AI.
+
 For email, you can find it on my Github page.
