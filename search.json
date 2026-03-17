@@ -4,7 +4,14 @@
     "href": "index.html",
     "title": "losnappas blog",
     "section": "",
-    "text": "The AI Company Win Condition\n\n\n\nopinion\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\nlosnappas\n\n\n\n\n\nNo matching items"
+    "text": "The Taalas Proposition\n\n\n\nopinion\n\ntaalas\n\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nlosnappas\n\n\n\n\n\n\n\n\n\n\n\n\nThe AI Company Win Condition\n\n\n\nopinion\n\n\n\n\n\n\n\n\n\nFeb 13, 2026\n\n\nlosnappas\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/the-taalas-proposition/index.html",
+    "href": "posts/the-taalas-proposition/index.html",
+    "title": "The Taalas Proposition",
+    "section": "",
+    "text": "Taalas is building “inference machines” — ASICs designed only to run models, not train them. They just take finished weights and execute inference, potentially much faster and cheaper than GPUs.\nThat could create a strange market dynamic. One company might spend heavily to train a model on GPUs, only for another to take the weights and run the model far more efficiently on dedicated inference hardware.\nThis matters because training is a huge upfront cost, but the payoff usually comes later, when the model is deployed and serving users. If someone else can take the trained model and offer the same capability at much lower cost, they may be able to undercut the original creator on price or simply earn better margins.\nIf you release the weights, you may be giving away the only asset that lets you recover the training cost. And if another company is better at serving those weights cheaply, the economic benefit may shift away from the team that built the model and toward the team that operates the inference infrastructure. Who’s left to pay for the training?"
   },
   {
     "objectID": "posts/the-ai-company-win-condition/index.html",
@@ -46,6 +53,6 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am a free developer, I learn AI on my own time. I live in the EU.\nFor email, you can find it on my Github page."
+    "text": "I am a free developer, I learn AI on my own time. I live in the EU.\nIdeas mine, text by AI.\nFor email, you can find it on my Github page."
   }
 ]

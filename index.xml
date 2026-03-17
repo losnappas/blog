@@ -10,7 +10,30 @@
 <atom:link href="https://losnappas.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog built with Quarto</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Thu, 12 Feb 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 16 Mar 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Taalas Proposition</title>
+  <dc:creator>losnappas </dc:creator>
+  <link>https://losnappas.github.io/posts/the-taalas-proposition/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="https://taalas.com/">Taalas</a> is building “inference machines” — ASICs designed only to run models, not train them. They just take finished weights and execute inference, potentially much faster and cheaper than GPUs.</p>
+<p>That could create a strange market dynamic. One company might spend heavily to train a model on GPUs, only for another to take the weights and run the model far more efficiently on dedicated inference hardware.</p>
+<p>This matters because training is a huge upfront cost, but the payoff usually comes later, when the model is deployed and serving users. If someone else can take the trained model and offer the same capability at much lower cost, they may be able to undercut the original creator on price or simply earn better margins.</p>
+<p>If you release the weights, you may be giving away the only asset that lets you recover the training cost. And if another company is better at serving those weights cheaply, the economic benefit may shift away from the team that built the model and toward the team that operates the inference infrastructure. Who’s left to pay for the training?</p>
+
+
+
+ ]]></description>
+  <category>opinion</category>
+  <category>taalas</category>
+  <guid>https://losnappas.github.io/posts/the-taalas-proposition/</guid>
+  <pubDate>Mon, 16 Mar 2026 22:00:00 GMT</pubDate>
+</item>
 <item>
   <title>The AI Company Win Condition</title>
   <dc:creator>losnappas </dc:creator>
