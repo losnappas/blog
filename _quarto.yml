@@ -3,7 +3,7 @@ project:
 
 website:
   description: "A blog built with Quarto"
-  site-url: https://losnappas.github.io # you must change this appropriately for RSS feeds to work properly
+  site-url: https://losnappas.github.io/blog # you must change this appropriately for RSS feeds to work properly
   title: "losnappas blog"
   navbar:
     right:
